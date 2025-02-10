@@ -1,2 +1,2 @@
 #!/bin/bash
-awk -v w="$WATER" -v s="$STIR" 'BEGIN{print substr("shtbeolhc", (length(w) + length(s)) % length("shtbeolhc") + 1, 1)}'
+expr length "$WATER" + length "$STIR" | tr '0-9' 'shtbeolhc'
