@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | ./16-odd
+awk 'NR % 2 == 1'
