@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Use awk to process the log file, group by IP and HTTP_CODE, and count occurrences
+awk '{print $1, $9}' /var/log/apache2/access.log | 
+    sort | 
+    uniq -c | 
+    sort -nr | 
+    awk '{print $1, $2, $3}'
