@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2009
+# Use `pgrep -a` to list processes containing 'bash' and display their PIDs and names
+pgrep -a bash
