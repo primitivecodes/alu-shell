@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Display a list of all processes in a user-oriented format, including the process hierarchy
-ps -eo user,start,command --sort=-%cpu --format="user:20,start:10,command:50"
+#comment
+# Use 'ps' command to list all processes, including those without TTY
+ps aux u --forest

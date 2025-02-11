@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-# Use the PID of 4-to_infinity_and_beyond and kill indirectly using trap
-PID=$(ps aux | grep '[4]-to_infinity_and_beyond' | awk '{print $2}')
-trap "echo Terminated" SIGTERM
-echo "Terminating 4-to_infinity_and_beyond with PID: $PID"
-kill -s TERM $PID
+#this script stops task 4
+pkill -f 4-to_infinity_and_beyond
