@@ -1,3 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Use awk to extract the visitor IP (1st column) and HTTP status code (9th column)
-awk '{print $1, $9}' apache-access.log
+awk '{print $1, $9}' /path/to/apache-access.log
+
