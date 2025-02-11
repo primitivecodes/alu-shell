@@ -1,10 +1,8 @@
-#!/usr/bin/env bash
+ii#!/usr/bin/env bash
 # This script displays the content of the current directory in a list format,
 # showing only the part of the name after the first dash, excluding hidden files.
 
-for file in *  # Selects all files and directories in the current directory
+for file in *-*  # Matches all files with at least one dash in the name
 do
-  if [[ "$file" == *-* ]]; then  # Ensures the file name contains at least one dash
-    echo "${file#*-}"  # Displays the part of the name after the first dash
-  fi
+  echo "${file#*-}"  # Displays the part of the name after the first dash
 done
