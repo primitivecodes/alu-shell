@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Define the SIGTERM trap to display invincibility message
+trap "echo I am invincible!!!" SIGTERM
+# Infinite loop to print "To infinity and beyond"
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
+done
