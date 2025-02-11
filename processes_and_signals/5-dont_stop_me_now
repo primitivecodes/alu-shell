@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Find the PID of the running '4-to_infinity_and_beyond' process
-PID=$(ps aux | grep '[4]-to_infinity_and_beyond' | awk '{print $2}')
+# Find the PID of the running '4-to_infinity_and_beyond' process using pgrep
+PID=$(pgrep -f '4-to_infinity_and_beyond')
 # Kill the process with the found PID
 kill "$PID"
